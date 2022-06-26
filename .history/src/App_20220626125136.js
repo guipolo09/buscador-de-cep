@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import "./styles.css";
 import api from "./services/api";
+import Main from "./Main";
 
 function App() {
   const [input, setInput] = useState("");
@@ -36,18 +37,7 @@ function App() {
           <FiSearch size={25} color="#fff" />
         </button>
       </div>
-      {Object.keys(cep).length > 1 && (
-        <main className="main">
-          <h2>CEP: {cep.cep}</h2>
-          <span>{cep.logradouro}</span>
-          <span>{cep.complemento}</span>
-          <span>{cep.bairro}</span>
-          <span>
-            {cep.localidade} - {cep.uf}
-          </span>
-          <span>DDD: {cep.ddd}</span>
-        </main>
-      )}
+      {Object.keys(cep).length > 1 && <Main />}
     </div>
   );
 }

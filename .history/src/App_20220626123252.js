@@ -17,7 +17,7 @@ function App() {
       setCep(response.data);
       setInput("");
     } catch {
-      alert("Opss, verifique o CEP e tente novamente!!");
+      alert("Opss, erro ao buscar CEP");
       setInput("");
     }
   }
@@ -36,18 +36,13 @@ function App() {
           <FiSearch size={25} color="#fff" />
         </button>
       </div>
-      {Object.keys(cep).length > 1 && (
-        <main className="main">
-          <h2>CEP: {cep.cep}</h2>
-          <span>{cep.logradouro}</span>
-          <span>{cep.complemento}</span>
-          <span>{cep.bairro}</span>
-          <span>
-            {cep.localidade} - {cep.uf}
-          </span>
-          <span>DDD: {cep.ddd}</span>
-        </main>
-      )}
+      <main className="main">
+        <h2>CEP: 16370-000</h2>
+        <span>Av. Bandeirantes</span>
+        <span>Complemento</span>
+        <span>Vila Rosa</span>
+        <span>Promissão - SP</span>
+      </main>
     </div>
   );
 }

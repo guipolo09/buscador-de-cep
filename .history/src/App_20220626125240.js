@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import "./styles.css";
 import api from "./services/api";
+import Main from "./Main";
 
 function App() {
   const [input, setInput] = useState("");

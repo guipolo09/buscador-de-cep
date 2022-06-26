@@ -17,7 +17,7 @@ function App() {
       setCep(response.data);
       setInput("");
     } catch {
-      alert("Opss, verifique o CEP e tente novamente!!");
+      alert("Opss, erro ao buscar CEP");
       setInput("");
     }
   }
@@ -36,7 +36,7 @@ function App() {
           <FiSearch size={25} color="#fff" />
         </button>
       </div>
-      {Object.keys(cep).length > 1 && (
+      {Object.keys(cep).length > 0 && (
         <main className="main">
           <h2>CEP: {cep.cep}</h2>
           <span>{cep.logradouro}</span>

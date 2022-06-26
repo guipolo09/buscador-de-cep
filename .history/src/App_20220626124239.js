@@ -17,7 +17,7 @@ function App() {
       setCep(response.data);
       setInput("");
     } catch {
-      alert("Opss, verifique o CEP e tente novamente!!");
+      alert("Opss, erro ao buscar CEP");
       setInput("");
     }
   }
